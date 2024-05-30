@@ -1,9 +1,7 @@
-# config.py
-
 # Model and data configuration parameters
 MAX_LENGTH = 256
 MODEL_PATH = "bert-base-uncased"
-DATA_FILE_PATH = "/data/tuone_labelling.jsonl" #"./data/tuone_labelling.jsonl"
+DATA_FILE_PATH = "./data/tuone_labelling.jsonl" #"./data/tuone_labelling.jsonl"
 TRAIN_FILE = "data/annotations.train.jsonlines"
 VALIDATION_FILE = "data/annotations.validation.jsonlines"
 OUTPUT_DIR = "./models/fine_tune_bert_output"
