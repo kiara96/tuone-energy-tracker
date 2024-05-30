@@ -1,21 +1,28 @@
-from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
-from transformers import RobertaPreTrainedModel, RobertaModel
-from transformers.utils import (
-    add_code_sample_docstrings,
-    add_start_docstrings,
-    add_start_docstrings_to_model_forward,
-    logging,
-    replace_return_docstrings,
-)
-from transformers.models.roberta.modeling_roberta import (
-    ROBERTA_INPUTS_DOCSTRING,
-    ROBERTA_START_DOCSTRING,
-    RobertaEmbeddings,
-)
-from typing import Optional, Union, Tuple
+# from transformers import AutoModelForTokenClassification, TrainingArguments, Trainer
+# from transformers import RobertaPreTrainedModel, RobertaModel
+# from transformers.utils import (
+#     add_code_sample_docstrings,
+#     add_start_docstrings,
+#     add_start_docstrings_to_model_forward,
+#     logging,
+#     replace_return_docstrings,
+# )
+# from transformers.models.roberta.modeling_roberta import (
+#     ROBERTA_INPUTS_DOCSTRING,
+#     ROBERTA_START_DOCSTRING,
+#     RobertaEmbeddings,
+# )
+# from typing import Optional, Union, Tuple
+# from transformers.modeling_outputs import TokenClassifierOutput
+# import torch
+# from torch import nn
+from transformers import RobertaModel, RobertaPreTrainedModel, TrainingArguments, Trainer
+from transformers.utils import add_start_docstrings_to_model_forward
+from transformers.models.roberta.modeling_roberta import RobertaEmbeddings, ROBERTA_INPUTS_DOCSTRING
 from transformers.modeling_outputs import TokenClassifierOutput
 import torch
 from torch import nn
+from typing import Optional, Union, Tuple
 
 class RobertaForSpanCategorization(RobertaPreTrainedModel):
     _keys_to_ignore_on_load_unexpected = [r"pooler"]
