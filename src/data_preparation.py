@@ -23,7 +23,7 @@ def prepare_datasets():
     df = load_data(config.DATA_FILE_PATH)
     print(f"Loaded dataset size: {len(df)}")  # Check size
     new_data = df.apply(transform_to_dict, axis=1)
-    train_data, val_data = train_test_split(new_data, test_size=0.2, random_state=42)
+    train_data, val_data = train_test_split(new_data, test_size=0.1, random_state=42)
     train_data.to_json('data/annotations.test.train.jsonlines', lines=True, orient='records')
     val_data.to_json('data/annotations.test.validation.jsonlines', lines=True, orient='records')
 

@@ -17,3 +17,4 @@ label2id = {
     **{f'I-{k}': 2*v for k, v in tag2id.items()}
 }
 id2label = {v: k for k, v in label2id.items()}
+print(label2id)
